@@ -1,18 +1,13 @@
 import { trap } from "async-helpers";
 import { app, admin } from "firebase-helpers";
+import { environment } from "environment-helpers";
 import { createCookieSessionStorage, redirect } from "@remix-run/node";
-
-const sessionSecret = process.env.SESSION_SECRET;
-
-if (!sessionSecret) {
-  throw new Error("SESSION_SECRET must be set!");
-}
 
 const storage = createCookieSessionStorage({
   cookie: {
     name: "__session",
-    secure: process.env.NODE_ENV === "production",
-    secrets: [sessionSecret],
+    secure: environment().NODE_ENV === "production",
+    secrets: [environment().SESSION_SECRET],
     sameSite: "lax",
     path: "/",
     maxAge: 60 * 60 * 24 * 30,

@@ -13,6 +13,7 @@
   },
   "peerDependencies": {
     "@remix-run/node": "^2.1.0",
-    "firebase-helpers": "*"
+    "firebase-helpers": "*",
+    "environment-helpers": "*"
   }
 }
