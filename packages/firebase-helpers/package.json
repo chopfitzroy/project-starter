@@ -1,0 +1,15 @@
+{
+  "name": "firebase-helpers",
+  "version": "0.1.0",
+  "description": "Remix Firebase integration",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^10.5.2",
+    "firebase-admin": "^11.11.0"
+  }
+}
